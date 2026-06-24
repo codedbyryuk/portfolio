@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbarBody {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    margin-top: 10px;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    gap:300px;
+    font-family: "Inter";
+    font-size: 22px;
+    color: beige;
+}
+nav a{
+    color: beige;
+    text-decoration: none;
+}
+
+.nav-left {
+    display: flex;
+    justify-content: flex-end;
+    gap: 200px;
+}
+
+.nav-right {
+    display: flex;
+    justify-content: flex-start;
+    gap: 200px;
+}

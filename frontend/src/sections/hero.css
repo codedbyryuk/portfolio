@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'suisse';
+    src: url('/SuisseIntl-Bold.ttf');
+}
+
+.heroBody {
+    width: 100%;
+    position: relative;
+    height: 100vh;
+    z-index: 3;
+    display: flex;
+}
+
+.hero {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+    position: relative;
+    justify-content: center;
+    padding: 2%;
+}
+
+.heroLeft {
+
+    background-color: #155d27;
+}
+
+.heroLeft h1 {
+    font-family: "suisse";
+    color: beige;
+    width: 500px;
+    font-size: 76px;
+}
+
+.heroLeft p {
+    font-family: "suisse";
+    color: rgb(153, 197, 148);
+    line-height: 1.4;
+    width: 300px;
+    align-self: flex-end;
+    text-align: right;
+    font-size: 24px;
+}
+
+.heroLeft .headings {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.heroRight {
+    background-color: #25a244;
+}
+
+/* .heroRight .pfp {
+    background-color: var(--darkGreen);
+    padding: 1%;
+    border-radius: 50%;
+} */
+
+
+.heroRight .bgText {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 210px;
+    line-height: 1;
+    opacity: 0.7;
+    /* z-index: 1; */
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pfp img {
+    width: 230px;
+    position: relative;
+    border: 10px solid #132a13a4;
+    border-radius: 50%;
+    opacity: 1;
+    z-index: 1;
+}
+
+
+.pfp {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    /* Fills right half */
+    height: 100%;
+    /* Fills full height */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    transition: margin-top 0.2s ease;
+}
+
+.scrollUp {
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    top: 96%;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* UPDATES WIDGET */
+
+.commit-widget {
+    position: absolute;
+    bottom: 40px;
+
+    background-color: #26803dd1;
+    /* Adjust this percentage to line up with your .headings left alignment */
+    display: flex;
+    padding: 2%;
+    border-radius: 12px;
+    flex-direction: column;
+    gap: 6px;
+    font-family: sans-serif;
+    /* or your mono font if you prefer */
+    pointer-events: none;
+    /* keeps it non-interactive so it doesn't block clicks */
+    z-index: 10;
+}
+
+/* Status Header with Pulsing Dot */
+.widget-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.widget-label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    font-family: "suisse";
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #5cffa9;
+    /* Clean accent green */
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(92, 255, 169, 0.7);
+    animation: pulse 2s infinite;
+}
+
+/* Commit Text Details */
+.widget-content {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+}
+
+.commit-msg {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.941);
+    font-weight: 400;
+    max-width: 400px;
+    font-family: "Inter";
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.commit-date {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.726);
+    font-family: "Inter";
+    font-variant-numeric: tabular-nums;
+}
+
+/* Live Pulse Animation */
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(92, 255, 169, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 6px rgba(92, 255, 169, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(92, 255, 169, 0);
+    }
+}
+
+
+
+/* Availability Widget (Bottom Right) */
+
+.leftWidget {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 40px;
+    gap: 10px;
+    width: 100%;
+    
+   
+    z-index: 10;
+
+}
+.leftWidget > div,
+.availability-widget,
+.profile-widget {
+    position: static !important; 
+
+}
+.profile-widget{
+    cursor: pointer;
+    z-index: 10;
+}
+
+
+.availability-widget {
+    position: absolute;
+    bottom: 40px;
+    background-color: #2a7b3e;
+    border-radius: 12px;
+    padding: 2%;
+    /* Matches the 10% spacing on the left widget */
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-family: "suisse";
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* Give the availability dot a different color if you want to distinguish it */
+.status-pulse {
+    background-color: #5cc8ff;
+    /* A clean blue/cyan accent, or keep it green (#5cffa9) */
+    box-shadow: 0 0 0 0 rgba(92, 200, 255, 0.7);
+    animation: pulse-blue 2s infinite;
+}
+
+.status-msg {
+    color: rgba(255, 255, 255, 0.941);
+    font-family: "Inter";
+    font-weight: 400;
+}
+
+/* Custom Pulse color for the status if you went with blue */
+@keyframes pulse-blue {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(92, 200, 255, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 6px rgba(92, 200, 255, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(92, 200, 255, 0);
+    }
+}

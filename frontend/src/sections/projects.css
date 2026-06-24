@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.projectSection {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+
+    background: #a3b18a;
+
+    transform: translateY(100%);
+}
+
+.projectContainer {
+    display: flex;
+    opacity: 0;
+    transform: translateY(120px) scale(0.96);
+    flex-direction: column;
+    gap: 20px;
+}
