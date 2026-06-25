@@ -112,6 +112,7 @@ function App() {
       duration: 0.6
       /* Smooth window duration for the entry */
     }, 0);
+   
   }, { scope: container });
 
 

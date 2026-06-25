@@ -30,7 +30,7 @@
 
 .heroLeft {
 
-    background-color: #155d27;
+    background-color: #0f0f0f;
 }
 
 .heroLeft h1 {
@@ -42,7 +42,7 @@
 
 .heroLeft p {
     font-family: "suisse";
-    color: rgb(153, 197, 148);
+    color: var(--text-main);
     line-height: 1.4;
     width: 300px;
     align-self: flex-end;
@@ -58,7 +58,7 @@
 }
 
 .heroRight {
-    background-color: #25a244;
+    background-color: var(--bg-card);
 }
 
 /* .heroRight .pfp {
@@ -76,6 +76,7 @@
     /* z-index: 1; */
     position: absolute;
     text-align: center;
+    color: var(--text-main);
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);

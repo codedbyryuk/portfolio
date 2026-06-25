@@ -5,20 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 gsap.registerPlugin(ScrollTrigger);
 
-const LOCAL_PROJECTS = [
-    {
-        name: "Sovern Lab Portfolio",
-        description: "Professional portfolio built with React, GSAP animations, and integrated 3D elements.",
-        logo: "/favicon.svg", // Path to your local asset or external URL
-        link: "https://yourlink.com"
-    },
-    {
-        name: "Vrynt Flow Dashboard",
-        description: "An Electron-based application syncing developer stats from GitHub and Cloudflare.",
-        logo: "icons.svg",
-        link: "https://yourlink.com"
-    }
-];
+
 
 
 function About() {

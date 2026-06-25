@@ -8,20 +8,256 @@
     position: absolute;
     inset: 0;
     z-index: 3;
-
+    flex-direction: column;
     width: 100%;
     height: 100vh;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
     margin: 0 auto;
 
-    background: #a3b18a;
+    background: rgb(39, 39, 39);
 
     transform: translateY(100%);
 }
 
 .projectContainer {
     display: flex;
-    opacity: 0;
-    transform: translateY(120px) scale(0.96);
-    flex-direction: column;
+    width: 80%;
+    background-color: #1b1b1b;
+    border-radius: 32px;
+    padding: 2%;
+    
+    justify-content: center;
     gap: 20px;
+}
+
+/* GITHUB REPO BOX */
+.githubRepos{
+    width:70%;
+    
+}
+.project-box {
+    
+    background-color: rgba(255, 255, 255, 0.03); /* Subtle backdrop */
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 16px;
+    padding: 24px;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.box-title {
+    font-family: "suisse",sans-serif;
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* THE SCROLLING MAGIC */
+.scroll-container {
+    max-height: 400px; /* The height limit before it starts scrolling */
+    overflow-y: auto;  /* Forces vertical scrolling when content exceeds max-height */
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    
+    padding-right: 12px; /* Leaves room for the scrollbar so it doesn't overlap text */
+}
+
+
+/* Individual Repo Cards */
+.repo-card {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.repo-card:hover {
+    border-color: #2a7b3e; /* Uses your dark green from earlier */
+    background-color: rgba(42, 123, 62, 0.1);
+}
+
+.repo-name {
+    color: white;
+    font-size: 1.05rem;
+    font-weight: 600;
+    font-family: "suisse",sans-serif;
+}
+
+.repo-desc {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.89rem;
+    font-family: "Inter",sans-serif;
+    line-height: 1.4;
+}
+
+.repo-lang {
+    color: #96fd84;
+    font-size: 0.75rem;
+    font-weight: bold;
+    font-family: "Inter",sans-serif;
+    margin-top: 4px;
+}
+
+
+.scroll-container::-webkit-scrollbar {
+    width: 10px;
+
+}
+
+.scroll-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background: #2a7b3e; 
+    border-radius: 10px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+    background: #5cffa9;
+}
+
+
+/* CUSTOM PROJECTS */
+.customProjects{
+    width: 100%;
+}
+
+.scroll-container-horizontal {
+    display: flex;
+    flex-direction: row;    
+    gap: 10px;    
+    overflow-x: auto;           
+    align-items: center;
+    overflow-y: hidden;         
+    width: 100%;
+    height: 100%;               
+    
+    scroll-snap-type: x mandatory; 
+    scrollbar-width: none;      
+}
+
+.scroll-container-horizontal::-webkit-scrollbar {
+    display: none;
+}
+
+
+.custom-project-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+    flex: 0 0 100%; 
+    width: 10% !important;
+    height: 100%;
+    
+    box-sizing: border-box;    
+    scroll-snap-align: start; 
+}
+
+/* Hover state remains clean */
+.custom-project-card:hover {
+    border-color: #5cc8ff; 
+    background-color: rgba(92, 200, 255, 0.1);
+}
+
+/* Aligns the logo and title in a row */
+.project-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Sizes the logo cleanly */
+.project-logo {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    border-radius: 4px;
+}
+.scrollBtns{
+    align-self: center;
+    padding: 5px;
+    display: flex;
+    gap: 50px;
+
+}
+.scrollBtns img{
+    border: 1px solid #5cc8ff;
+    border-radius: 6px;
+    background-color: rgba(92, 200, 255, 0.1);
+    padding: 8px;
+    width: 30px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.scrollBtns img:hover{
+    scale: 1.1;
+    background-color: (42, 123, 62, 0.1);
+}
+
+
+.projects-top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 32px auto; /* Sets up a clean gap right above your main boxes */
+}
+
+.global-section-title {
+    font-size: 2.4rem;
+    font-family: "suisse",sans-serif;
+    /* color: var(--text-pure); */
+    color: #00ff66;
+    margin: 0 0 8px 0;
+}
+
+.global-section-desc {
+    color: #c4c4c4;
+    font-family: "Inter",sans-serif;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* Status Indicator Pill */
+.status-metric-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    padding: 6px 14px;
+    border-radius: 20px;
+}
+
+.badge-text {
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: var(--text-main);
+}
+
+.pulse-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #00ff66; /* Vibrant active green status dot */
+    border-radius: 50%;
+    box-shadow: 0 0 8px #00ff66;
 }
