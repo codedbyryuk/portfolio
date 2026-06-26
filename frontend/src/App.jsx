@@ -7,6 +7,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import Lenis from '@studio-freight/lenis';
 import Project from './sections/projects';
+import Contact from './sections/contact';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -22,7 +23,7 @@ function App() {
       orientation: 'vertical',
       gestureOrientation: 'vertical',
       smoothWheel: true,   // Turn on smooth scrolling for mouse wheels
-      wheelMultiplier: 1.4, // <-- THE MAGIC KNOB: Increase this (e.g., 1.5 to 2.0) to make a small scroll move a lot further!
+      wheelMultiplier: 1, // <-- THE MAGIC KNOB: Increase this (e.g., 1.5 to 2.0) to make a small scroll move a lot further!
     });
 
     // Connect Lenis to GSAP ScrollTrigger so they remain perfectly synced
@@ -54,18 +55,30 @@ function App() {
       .to('.heroRight', { x: "55vw", pointerEvents: "none", ease: "power2.inOut" }, 0);
     tl.to('.heroBody', { pointerEvents: "none" }, 0)
 
-    tl.to('.idk', {
-      backgroundColor: "#000000",
-      duration: 1,
-    }, 0)
+
     tl.to({}, {
       duration: 1
     });
 
     tl.to('.projectSection', {
       yPercent: -100,
+      duration: 2,
       ease: "power2.inOut"
     });
+    tl.to({}, {
+      duration: 1
+    });
+
+    tl.to(".contactSection", {
+      xPercent: -100,
+      ease: "power2.inOut",
+      duration: 1
+    });
+    tl.to(".projectSection",{
+      xPercent:-100,
+      ease:"power2.inOut",
+      duration:1
+    },"<")
 
 
     let moveX = 0;
@@ -103,7 +116,7 @@ function App() {
       }, 0);
     }
 
-    tl.from('.card', {
+    tl.from('.cards', {
       scale: 0.7,             /* Start shrunken down */
       opacity: 0,             /* Start completely invisible */
       y: 60,                  /* Slide upward slightly as they pop */
@@ -112,7 +125,7 @@ function App() {
       duration: 0.6
       /* Smooth window duration for the entry */
     }, 0);
-   
+
   }, { scope: container });
 
 
@@ -123,6 +136,7 @@ function App() {
         <Hero />
         <About />
         <Project />
+        <Contact />
       </div>
     </>
   )

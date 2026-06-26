@@ -24,8 +24,8 @@ function About() {
             <div className="aboutTrigger"></div>
             <div className="aboutBody">
 
-                <div className="card boxes">
-                    <div className="card bento aboutme" onMouseEnter={() => {
+                <div className="cards boxes">
+                    <div className="cards bento aboutme" onMouseEnter={() => {
                         const pfp = document.querySelector('.pfp'); // Swap with your actual PFP class name
                         if (pfp) pfp.style.marginTop = '-4px';
                     }}
@@ -42,7 +42,7 @@ function About() {
                                 <p className="bento">Fahim Akhtar</p>
                             </div>
                         </div>
-                        <div className="card paras">
+                        <div className="cards paras">
                             <p className="leftTxt">Hi, I am Fahim and I enjoy building software, exploring new technologies,
                                 and turning ideas into working projects.
                             </p>
@@ -50,7 +50,7 @@ function About() {
                                 tool, a game, a website, or an experiment worth pursuing.</p></div>
                     </div>
                     <div className="secbox">
-                        <div className="card box bento toolbox" onMouseEnter={hoverIn} onMouseLeave={hoverOut}><span className="tag aboutTag">MY SKILLS</span>
+                        <div className="cards box bento toolbox" onMouseEnter={hoverIn} onMouseLeave={hoverOut}><span className="tag aboutTag">MY SKILLS</span>
 
                             <div className="skills">
                                 <img className=" skillIcon" src="/favicon.svg" alt="react" />
@@ -62,7 +62,7 @@ function About() {
                                 <img className=" skillIcon" src="/python-svgrepo-com.svg" alt="python" />
                             </div>
                         </div>
-                        <div className=" card box bento status" onMouseEnter={hoverIn} onMouseLeave={hoverOut}><span className="tag aboutTag">CURRENT STATUS</span>
+                        <div className=" cards box bento status" onMouseEnter={hoverIn} onMouseLeave={hoverOut}><span className="tag aboutTag">CURRENT STATUS</span>
                             <div className="info">
                                 <p><span>Current Project: </span>SaaS web app.</p>
                                 <p><span>Exploring: </span>Backend architectures.</p>

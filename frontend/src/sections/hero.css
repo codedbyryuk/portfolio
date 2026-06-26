@@ -123,7 +123,7 @@
     position: absolute;
     bottom: 40px;
 
-    background-color: #26803dd1;
+    background-color: #000000d1;
     /* Adjust this percentage to line up with your .headings left alignment */
     display: flex;
     padding: 2%;
@@ -237,7 +237,7 @@
 .availability-widget {
     position: absolute;
     bottom: 40px;
-    background-color: #2a7b3e;
+    background-color: #323232;
     border-radius: 12px;
     padding: 2%;
     /* Matches the 10% spacing on the left widget */

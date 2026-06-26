@@ -16,10 +16,10 @@ const LOCAL_PROJECTS = [
         link: "https://pokemonbidwars.pages.dev"
     },
     {
-        name: "Vrynt Flow Dashboard",
-        description: "An Electron-based application syncing developer stats from GitHub and Cloudflare.",
+        name: "FireSideTalks",
+        description: "A simple chatting web-app made with web sockets.",
         logo: "icons.svg",
-        link: "https://yourlink.com"
+        link: "https://firesidetalk.pages.dev"
     },
     {
         name: "Sovern Lab Portfolio",
@@ -87,7 +87,7 @@ function Project() {
 
     return (<>
         <div className="projectSection">
-            <div className="card projects-top-header">
+            <div className="cards projects-top-header">
                 <div className="header-title-group">
                     <h2 className="global-section-title">Verified <span style={{color:"var(--text-pure)"}}>Repositories</span></h2>
                     <p className="global-section-desc">A real-time directory syncing active repositories directly from GitHub <br />

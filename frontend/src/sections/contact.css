@@ -1,0 +1,195 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.contactSection{
+    position:absolute;
+    background-color: #171717;
+    inset:0;
+
+    width:100%;
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+
+    z-index:4;
+
+    transform:translateX(100%);
+}
+.contactWrapper{
+    width: 90%;
+    border: 1px solid #00ff66;
+    height: 80%;
+    background-color: #2f2f2f;
+    border-radius: 32px;
+    justify-content: space-between;
+    padding: 3%;
+    display: flex;
+    align-items: center;   
+}
+
+.contactWrapper .left{
+    display: flex;
+    height: 100%;
+}
+.left h2{
+    font-family: "suisse";
+    font-size: 3.6rem;
+    color: rgb(255, 255, 255);
+}
+.left p{
+    font-family: "suisse";
+    font-size: 1.2rem;
+    color: var(--text-main);
+}
+.left .text{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+
+.right{
+    height: 100%;
+    display: flex;
+    background-color: #0000003a;
+    padding: 4%;
+    gap: 50px;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 24px;
+}
+.right p{
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-family: "Inter";
+}
+.right .socialLinks{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+}
+
+
+
+
+/* CONTACT FORM */
+
+/* --- FORM LAYOUT --- */
+.contact-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    
+}
+
+/* Places Name and Email side-by-side on desktop */
+.input-group-row {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    text-align: left; /* Ensures labels align cleanly to the left */
+}
+
+/* --- THE LABELS --- */
+.input-wrapper label {
+    font-family: "Inter";
+    font-size: 0.74rem;
+    color: #ffffff; /* var(--text-muted) */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* --- THE INPUTS & TEXTAREA --- */
+.input-wrapper input,
+.input-wrapper textarea {
+    width: 100%;
+    background-color: #0a0a0a; /* var(--bg-base) - Pushes inputs into the background */
+    border: 1px solid rgba(255, 255, 255, 0.05); /* var(--border-subtle) */
+    border-radius: 8px;
+    padding: 14px 16px;
+    color: #ffffff; /* var(--text-pure) */
+    font-family: inherit;
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.3s ease;
+    resize: none; /* Prevents user from breaking the layout by dragging the corner */
+}
+.input-wrapper textarea{
+    height: 200px;
+}
+/* The Placeholder text */
+.input-wrapper input::placeholder,
+.input-wrapper textarea::placeholder {
+    color: rgba(187, 187, 187, 0.835);
+}
+
+/* THE FOCUS STATE (Crucial for the premium feel) */
+.input-wrapper input:focus,
+.input-wrapper textarea:focus {
+    border-color: #00ff66; /* var(--border-glow) */
+    background-color: #1a1a1a; /* var(--bg-card) */
+    box-shadow: 0 0 0 4px rgba(63, 255, 73, 0.02); /* Soft ambient glow */
+}
+
+/* --- THE SUBMIT BUTTON --- */
+.submit-btn {
+    margin-top: 12px;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 8px;
+    padding: 16px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.submit-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.15);
+}
+
+.submit-btn:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+/* Form Status States */
+.submit-btn.sending {
+    background-color: #1a1a1a;
+    color: #737373;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: wait;
+}
+
+.submit-btn.sent {
+    background-color: #2a7b3e; /* Uses a subtle, deep success green */
+    color: #ffffff;
+    cursor: default;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .input-group-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
