@@ -21,8 +21,8 @@ function About() {
 
     return (
         <>
-            <div className="aboutTrigger"></div>
-            <div className="aboutBody">
+            {/* <div className="aboutTrigger"></div> */}
+            <div className="aboutBody" id="about">
 
                 <div className="cards boxes">
                     <div className="cards bento aboutme" onMouseEnter={() => {

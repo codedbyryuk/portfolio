@@ -8,16 +8,20 @@ import { useGSAP } from '@gsap/react';
 import Lenis from '@studio-freight/lenis';
 import Project from './sections/projects';
 import Contact from './sections/contact';
+import { setLenis } from './components/scroll';
 
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
   const container = useRef(null);
+  const lenisRef = useRef(null);
+  
+
 
 
 
   useEffect(() => {
-    const lenis = new Lenis({
+    lenisRef.current = new Lenis({
       duration: 2.5,       // How long the smooth scroll animation lasts (higher = more buttery)
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Clean physics curve
       orientation: 'vertical',
@@ -25,17 +29,19 @@ function App() {
       smoothWheel: true,   // Turn on smooth scrolling for mouse wheels
       wheelMultiplier: 1, // <-- THE MAGIC KNOB: Increase this (e.g., 1.5 to 2.0) to make a small scroll move a lot further!
     });
+    setLenis(lenisRef.current);
 
-    // Connect Lenis to GSAP ScrollTrigger so they remain perfectly synced
-    lenis.on('scroll', ScrollTrigger.update);
+    const lenis = lenisRef.current;
+    lenisRef.current.on("scroll", ScrollTrigger.update);
 
     gsap.ticker.add((time) => {
-      lenis.raf(time * 1000);
+      lenisRef.current.raf(time * 1000);
     });
 
     // Clean up on component unmount
     return () => {
-      lenis.destroy();
+      lenisRef.current.destroy();
+      window.lenis = null; // Remove the global reference
     };
   }, []);
 
@@ -63,7 +69,7 @@ function App() {
     tl.to('.projectSection', {
       yPercent: -100,
       duration: 2,
-      ease: "power2.inOut"
+      ease: "power4.inOut"
     });
     tl.to({}, {
       duration: 1
@@ -71,14 +77,14 @@ function App() {
 
     tl.to(".contactSection", {
       xPercent: -100,
-      ease: "power2.inOut",
+      ease: "power5.inOut",
       duration: 1
     });
-    tl.to(".projectSection",{
-      xPercent:-100,
-      ease:"power2.inOut",
-      duration:1
-    },"<")
+    tl.to(".projectSection", {
+      xPercent: -100,
+      ease: "power5.inOut",
+      duration: 1
+    }, "<")
 
 
     let moveX = 0;
@@ -133,7 +139,9 @@ function App() {
     <>
       <div className="idk landing-page" ref={container}>
         <Navbar />
-        <Hero />
+        <div id='hero'>
+          <Hero />
+        </div>
         <About />
         <Project />
         <Contact />

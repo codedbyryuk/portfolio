@@ -53,7 +53,7 @@ function Hero() {
 
     return (
         <>
-            <div className="heroBody">
+            <div className="heroBody" id="hero">
 
                 <div className="hero heroLeft">
                     <div className="headings">

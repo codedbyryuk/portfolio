@@ -42,12 +42,21 @@ function Contact() {
 
     return (<>
 
-        <div className="contactSection" >
+        <div className="contactSection" id="contact" >
             <div className="contactWrapper" >
                 <div className="left">
                     <div className="text">
                         <h2>Let's <span style={{ color: "#00ff66" }}>build</span> something next.</h2>
                         <p>  Currently accepting new opportunities, custom development projects, and collaborative<br /> experiments. Send over a message to discuss a timeline or establish a connection.</p>
+                    </div>
+                    <img src="/paper_plane_blue.png" alt="" />
+                    <div className="other">
+                        <div className="otherInfo locationInfo">
+                            <img src="/location.svg" alt="" /> <p>India, Assam</p>
+                        </div>
+                        <div className="otherInfo gmailInfo">
+                            <img src="/gmail.svg" alt="" /><p>codedbyryuk@gmail.com</p>
+                        </div>
                     </div>
                 </div>
                 <div className="right">

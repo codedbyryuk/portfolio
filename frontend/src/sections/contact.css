@@ -41,14 +41,49 @@
     color: rgb(255, 255, 255);
 }
 .left p{
-    font-family: "suisse";
+    font-family: "Inter";
     font-size: 1.2rem;
-    color: var(--text-main);
+    color: #d6d6d6;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.left img{
+    width: 800px;;
 }
 .left .text{
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 20px;
+}
+.left .other{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.left .gmailInfo{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.left .gmailInfo span{
+    font-size: 1.5rem;
+    font-family: "suisse";
+    color: #ffffff;
+}
+.left .otherInfo p{
+    font-family: "Inter";
+}
+.left .otherInfo{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+.left .otherInfo img{
+    width: 20px;
 }
 
 

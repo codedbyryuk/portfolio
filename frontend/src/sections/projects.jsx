@@ -86,7 +86,7 @@ function Project() {
 
 
     return (<>
-        <div className="projectSection">
+        <div className="projectSection" id="project">
             <div className="cards projects-top-header">
                 <div className="header-title-group">
                     <h2 className="global-section-title">Verified <span style={{color:"var(--text-pure)"}}>Repositories</span></h2>

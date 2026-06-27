@@ -53,7 +53,7 @@
 
     border-radius: 18px;
 
-    background-color: var(--lightBeige);
+    background-color: #f8f8f8;
     transition: margin-top 0.2s ease;
 }
 
@@ -96,9 +96,9 @@
     border-radius: 12px;
     display: flex;
     align-items: center;
-    color: rgb(11, 62, 4);
+    color: rgb(38, 38, 38);
     height: 100%;
-    background-color: rgb(209, 218, 150);
+    background-color: rgba(0, 0, 0, 0.239);
 }
 
 .pfp-name p {
@@ -123,7 +123,7 @@
     padding: 4%;
     border: 1px solid;
     width: 100%;
-    background-color: var(--lightBeige);
+    background-color: #f8f8f8;
     border-radius: 18px;
 }
 
@@ -170,9 +170,8 @@
     height: 100%;
     padding: 4%;
     width: 100%;
-    background-color: var(--lightBeige);
+    background-color: #f8f8f8;
     border: 1px solid;
-
     border-radius: 18px;
 }
 
@@ -187,6 +186,4 @@
     font-family: "Inter";
     font-size: 20px;
 }
-
-/* PROJECT SECTION CSS */
 
