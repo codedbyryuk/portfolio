@@ -37,7 +37,7 @@
     font-family: "suisse";
     color: beige;
     width: 500px;
-    font-size: 76px;
+    font-size: clamp(2.8rem, 6vw, 4.8rem);
 }
 
 .heroLeft p {
@@ -47,7 +47,7 @@
     width: 300px;
     align-self: flex-end;
     text-align: right;
-    font-size: 24px;
+    font-size: clamp(1rem, 2vw, 1.5rem);
 }
 
 .heroLeft .headings {
@@ -70,7 +70,7 @@
 
 .heroRight .bgText {
     font-family: "Bebas Neue", sans-serif;
-    font-size: 210px;
+    font-size: clamp(5rem, 15vw, 13rem);
     line-height: 1;
     opacity: 0.7;
     /* z-index: 1; */
@@ -82,7 +82,7 @@
     transform: translate(-50%, -50%);
 }
 
-.pfp img {
+.pfp .pfpImg {
     width: 230px;
     position: relative;
     border: 10px solid #132a13a4;
@@ -217,18 +217,20 @@
     bottom: 40px;
     gap: 10px;
     width: 100%;
-    
-   
+
+
     z-index: 10;
 
 }
-.leftWidget > div,
+
+.leftWidget>div,
 .availability-widget,
 .profile-widget {
-    position: static !important; 
+    position: static !important;
 
 }
-.profile-widget{
+
+.profile-widget {
     cursor: pointer;
     z-index: 10;
 }
@@ -279,4 +281,180 @@
         transform: scale(0.95);
         box-shadow: 0 0 0 0 rgba(92, 200, 255, 0);
     }
+}
+
+/* Media Quesries */
+/* Tablet */
+@media (max-width: 1024px) {
+
+    .heroLeft h1 {
+        max-width: 420px;
+    }
+
+    .heroLeft p {
+        max-width: 260px;
+    }
+
+    .heroRight .bgText {
+        font-size: clamp(8rem, 18vw, 11rem);
+    }
+
+    .pfp img {
+        width: min(190px, 38vw);
+    }
+
+    .commit-widget,
+    .availability-widget {
+        transform: scale(.9);
+    }
+
+}
+
+/* Android */
+@media (max-width:768px) {
+
+    .heroBody {
+        flex-direction: column;
+        height: 100vh;
+        
+        min-height: 100vh;
+    }
+
+    .hero {
+        width: 100%;
+        height: 100vh;
+        
+    }
+
+    .heroLeft {
+        
+        order: 2;
+        align-items: center;
+        text-align: center;
+    }
+
+    .heroRight {
+        order: 1;
+
+    }
+
+    .heroRight {
+        position: relative;
+    }
+
+    .heroRight .bgText {
+        top: 57%;
+        transform: translate(-50%, -50%);
+        font-size: clamp(5rem, 24vw, 8rem) !important;
+    }
+
+    .heroLeft .headings {
+        align-items: center;
+    }
+
+    .heroLeft h1 {
+        width: 100%;
+        max-width: 95%;
+        text-align: center;
+    }
+
+    .heroLeft p {
+        width: 100%;
+        max-width: 90%;
+        text-align: center;
+        align-self: center;
+        margin-top: 20px;
+    }
+
+    .pfp {
+        width: 100%;
+    }
+
+    .pfp .pfpImg {
+        width: 170px !important;
+
+    }
+
+    
+
+    .scrollUp {
+        display: none;
+    }
+
+    
+    .commit-widget{
+        position: relative;
+        top: -100px;
+        padding: 12px !important;
+    }
+
+    .widget-content {
+        gap: 5.0px;
+    }
+
+    .commit-msg {
+        font-size: 0.8rem;
+    }
+
+    .commit-widget,
+    .availability-widget {
+        position: relative;
+        width: 100%;
+    }
+    /* .leftWidget .availability-widget {
+        display: none;
+    } */
+    
+    .leftWidget{
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 0 !important;
+        bottom: 10px;
+        
+    }
+    .leftWidget img{
+        position: relative;
+        width: 60px;
+        transform: translateX(-10%);
+    }
+
+}
+
+/* small phones */
+@media (max-width:480px) {
+
+    .hero {
+        padding: 24px;
+    }
+
+    .heroLeft h1 {
+        font-size: 2.4rem;
+        line-height: 1.05;
+    }
+
+    .heroLeft p {
+        font-size: 1rem;
+    }
+
+    .pfp img {
+        width: 150px;
+        border-width: 6px;
+    }
+
+    .heroRight .bgText {
+        font-size: 4rem;
+    }
+
+    .commit-widget,
+    .availability-widget {
+        padding: 18px;
+    }
+
+    .commit-msg {
+        white-space: normal;
+    }
+
 }

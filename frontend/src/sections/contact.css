@@ -228,3 +228,126 @@
     }
 }
 
+@media (max-width:1024px){
+
+    .contactSection{
+        position:relative;
+        inset:auto;
+        transform:none !important;
+        height:auto;
+        min-height:100vh;
+        padding:60px 30px;
+    }
+
+    .contactWrapper{
+        width:100%;
+        height:auto;
+        flex-direction:column;
+        gap:50px;
+        padding:40px;
+    }
+
+    .left,
+    .right{
+        width:100%;
+    }
+
+    .left img{
+        width:100%;
+        max-width:450px;
+    }
+
+}
+
+
+@media (max-width:768px){
+
+    .contactSection{
+        position:relative;
+        inset:auto;
+        transform:none !important;
+        height:auto;
+        min-height:100vh;
+        padding:40px 18px;
+    }
+
+    .contactWrapper{
+        width:100%;
+        height:auto;
+        flex-direction:column;
+        gap:50px;
+        padding:20px;
+        border-radius:20px;
+    }
+
+    .left,
+    .right{
+        width:100%;
+    }
+
+    .left{
+        gap:40px;
+    }
+
+    .left h2{
+        font-size:2.3rem;
+    }
+
+    .left p{
+        font-size:1rem;
+        line-height:1.6;
+    }
+
+    .left .plane{
+        display: none;
+    }
+
+    .left .other{
+        flex-direction:column;
+        gap:20px;
+        align-items:flex-start;
+    }
+
+    .left .gmailInfo,
+    .left .otherInfo{
+        width:100%;
+    }
+
+    .left .gmailInfo span{
+        font-size:1.1rem;
+    }
+
+    .right{
+        padding:18px;
+        gap:30px;
+        border-radius:18px;
+    }
+
+    .right p{
+        text-align:center;
+        font-size:1rem;
+    }
+
+    .right .socialLinks{
+        width:100%;
+    }
+
+    .contact-form{
+        gap:22px;
+    }
+
+    .input-group-row{
+        flex-direction:column;
+        gap:22px;
+    }
+
+    .input-wrapper textarea{
+        height:160px;
+    }
+
+    .submit-btn{
+        padding:15px;
+        font-size:1rem;
+    }
+
+}

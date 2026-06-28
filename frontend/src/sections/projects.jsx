@@ -13,19 +13,15 @@ const LOCAL_PROJECTS = [
         name: "Pokemon Bid Wars",
         description: "A Pokemon fan-game in which players bid on a pokemon to get it and build their team. The battle takes place in pokemon showdown",
         logo: "/pokemonbidwars_pfp.png", // Path to your local asset or external URL
-        link: "https://pokemonbidwars.pages.dev"
+        link: "https://pokemonbidwars.pages.dev",
+        gallery:"/pokebidwars_gal.png"
     },
     {
         name: "FireSideTalks",
         description: "A simple chatting web-app made with web sockets.",
-        logo: "icons.svg",
-        link: "https://firesidetalk.pages.dev"
-    },
-    {
-        name: "Sovern Lab Portfolio",
-        description: "Professional portfolio built with React, GSAP animations, and integrated 3D elements.",
-        logo: "/favicon.svg", // Path to your local asset or external URL
-        link: "https://yourlink.com"
+        logo: "/firesidetalk_ico.png",
+        link: "https://firesidetalk.pages.dev",
+        gallery:"/firesidetalks_gal.png"
     },
 ];
 
@@ -137,6 +133,9 @@ function Project() {
                                     <h3 className="repo-name">{project.name}</h3>
                                 </div>
                                 <p className="repo-desc">{project.description}</p>
+                                <div className="gal_pics">
+                                <img src={project.gallery} alt="" className="gallery" />
+                                </div>
                             </a>
                         ))}
 

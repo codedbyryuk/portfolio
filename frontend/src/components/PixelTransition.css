@@ -3,7 +3,7 @@
   color: var(--color-primary, #fff);
   border-radius: 50%;
   z-index: 0;
-  width: 230px;
+  width:230px;
   max-width: 100%;
   position: relative;
   overflow: hidden;
@@ -41,4 +41,11 @@
 .pixelated-image-card__pixel {
   display: none;
   position: absolute;
+}
+
+/* media queries */
+@media (max-width: 768px) {
+  .pixelated-image-card {
+    width: 170px;
+  }
 }

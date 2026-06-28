@@ -4,13 +4,14 @@
     box-sizing: border-box;
 }
 
-.navbarBody {
-    width: 100%;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10;
-    margin-top: 10px;
+.navbarBody{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    transform:none;
+    margin:0;
+    z-index:1000;
 }
 
 nav {
@@ -38,4 +39,124 @@ nav a{
     display: flex;
     justify-content: flex-start;
     gap: 200px;
+}
+.mobile-menu{
+    display: none;
+}
+
+
+
+.mobile-menu a{
+    font-size:2rem;
+    color:white;
+    text-decoration:none;
+    font-family:"suisse";
+}
+.menu-btn{
+    display:none;
+}
+.menu-btn{
+    width:42px;
+    height:42px;
+    display:none;
+    flex-direction:column;
+    justify-content:center;
+    gap:6px;
+    cursor:pointer;
+    z-index:1001;
+}
+
+.menu-btn span{
+    width:100%;
+    height:2px;
+    background:white;
+    border-radius:20px;
+    transition:.3s;
+}
+.menu-btn.open span:nth-child(1){
+    transform:translateY(8px) rotate(45deg);
+}
+
+.menu-btn.open span:nth-child(2){
+    opacity:0;
+}
+
+.menu-btn.open span:nth-child(3){
+    transform:translateY(-8px) rotate(-45deg);
+}
+
+/* android */
+/* @media (max-width: 768px) {
+    .nav-left {
+        gap: 10px;
+    }
+
+    .nav-right {
+        gap: 10px;
+    }
+    nav{
+        gap: 10px;
+    }
+} */
+ @media (max-width:768px){
+    .mobile-menu{
+        display:flex;
+        position:fixed;
+        inset:0;
+        background:#111;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        gap:40px;
+
+        transform:translateY(-100%);
+        transition:.45s ease;
+        z-index:100;
+    }
+
+    .mobile-menu.open{
+        transform:translateY(0);
+    }
+
+    .navbarBody{
+        margin-top:0;
+        padding:1px 20px;
+    }
+    .menu-btn{
+        display:flex;
+        
+    }
+    .menu-btn span{
+        width: 60% !important;
+    }
+
+    nav{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        gap:0;
+    }
+
+    .nav-left,
+    .nav-right{
+        display:none;
+    }
+
+    .menu-btn{
+        width:42px;
+        height:42px;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        gap:6px;
+        cursor:pointer;
+    }
+
+    .menu-btn span{
+        height:2px;
+        width:100%;
+        background:white;
+        border-radius:20px;
+    }
+
 }

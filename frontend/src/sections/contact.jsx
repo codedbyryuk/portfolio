@@ -1,10 +1,12 @@
 import React from "react";
 import './contact.css';
-import { useEffect,useState, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './contact.css';
 import SocialLinks from "../components/social_links";
+import emailjs from '@emailjs/browser';
+emailjs.init("y1E6fIrzt0eXCCxAx");
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,6 +15,7 @@ function Contact() {
 
     const sectionRef = useRef(null);
     const boxRef = useRef(null);
+
 
     // Form State
     const [formData, setFormData] = useState({
@@ -30,15 +33,30 @@ function Contact() {
         e.preventDefault();
         setStatus('sending');
 
-        // Simulate a network request
-        setTimeout(() => {
-            setStatus('sent');
-            setFormData({ username: '', email: '', message: '' });
+        
+        const templateParams = {
+            title: "New Portfolio Inquiry", 
+            name: formData.username,        
+            email: formData.email,         
+            time: new Date().toLocaleString(),
+            message: formData.message      
+        };
 
-            // Reset back to idle after a few seconds
-            setTimeout(() => setStatus('idle'), 3000);
-        }, 1500);
+        emailjs.send('service_censm3c', 'template_1isaroi', templateParams)
+            .then((response) => {
+                console.log('SUCCESS!', response.status, response.text);
+                setStatus('sent');
+                setFormData({ username: '', email: '', message: '' });
+
+               
+                setTimeout(() => setStatus('idle'), 3000);
+            }, (err) => {
+                console.log('FAILED...', err);
+                alert("Message failed to send. Please try again.");
+                setStatus('idle'); 
+            });
     };
+
 
     return (<>
 
@@ -49,7 +67,7 @@ function Contact() {
                         <h2>Let's <span style={{ color: "#00ff66" }}>build</span> something next.</h2>
                         <p>  Currently accepting new opportunities, custom development projects, and collaborative<br /> experiments. Send over a message to discuss a timeline or establish a connection.</p>
                     </div>
-                    <img src="/paper_plane_blue.png" alt="" />
+                    <img className="plane" src="/paper_plane_blue.png" alt="" />
                     <div className="other">
                         <div className="otherInfo locationInfo">
                             <img src="/location.svg" alt="" /> <p>India, Assam</p>
@@ -114,8 +132,8 @@ function Contact() {
                         </button>
                     </form>
                     <div className="socialLinks">
-                    <p>Also available on</p>
-                    <SocialLinks/>
+                        <p>Also available on</p>
+                        <SocialLinks />
                     </div>
                 </div>
             </div>

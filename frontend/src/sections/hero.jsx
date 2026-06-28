@@ -57,9 +57,8 @@ function Hero() {
 
                 <div className="hero heroLeft">
                     <div className="headings">
-                        <h1>Making things i wish existed.</h1>
+                        <h1>Making <span style={{color:"#00ff66"}}>things</span> i wish existed.</h1>
                         <p>
-
                             A collection of tools, websites, experiments, and things that started as random ideas.</p>
                     </div>
                     <div className="leftWidget">
@@ -113,7 +112,7 @@ function Hero() {
                             <img
                                 src="/pfp_def.png"
                                 alt="default pixel transition content, a cat!"
-                                style={{ width: "230px" }}
+                                className="pfpImg"
                             />
                         }
                         secondContent={
