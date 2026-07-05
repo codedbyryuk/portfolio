@@ -267,7 +267,7 @@ export default function App() {
 
           {/* projects Section */}
           <section id="work" className="section">
-            <p className="eyebrow reveal">Fig. 03 — Selected work</p>
+            <p className="eyebrow reveal">Fig. 04 — Selected work</p>
             <h2 className="section-heading reveal">Projects</h2>
             <div className="work-list">
               {portfolioData.projects.map((project) => (
@@ -305,7 +305,7 @@ export default function App() {
 
           {/* Contact Section */}
           <section id="contact" className="section contact">
-            <p className="eyebrow reveal">Fig. 04 — Contact</p>
+            <p className="eyebrow reveal">Fig. 05 — Contact</p>
             <h2 className="section-heading contact-heading reveal">Let's build<br />something.</h2>
             <a href="mailto:codedbyryuk@gmail.com" className="email-cta reveal">codedbyryuk@gmail.com</a>
             <div className="contact-row reveal">
