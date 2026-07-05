@@ -24,7 +24,7 @@
       "year": "2026",
       "description": "A Pokemon fan-game in which two players bid on a random pokemon to include them on the team. The battle takes place in Pokemon Showdown.",
       "tags": ["React", "WebSockets", "Firebase"],
-      "link": "#",
+      "link": "https://pokemonbidwars.pages.dev",
       "diagram": "<circle cx=\"14\" cy=\"46\" r=\"3\"/><circle cx=\"30\" cy=\"24\" r=\"3\"/><circle cx=\"48\" cy=\"34\" r=\"3\"/><circle cx=\"54\" cy=\"14\" r=\"3\"/><path d=\"M14 46 30 24 48 34 54 14\"/>"
     },
     {

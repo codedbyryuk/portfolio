@@ -164,8 +164,8 @@ export default function App() {
             <div className="clock"><span className="dot" aria-hidden="true"></span><span>{time}</span></div>
             <ul className="social-row">
               <li><a href="https://github.com/codedbyryuk" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-              <li><a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-              <li><a href="#" target="_blank" rel="noopener noreferrer">X / Twitter</a></li>
+              <li><a href="https://discord.com/users/1507692324157788180" target="_blank" rel="noopener noreferrer">Discord</a></li>
+              <li><a href="https://x.com/codedbyryuk" target="_blank" rel="noopener noreferrer">X / Twitter</a></li>
             </ul>
             <a href="mailto:codedbyryuk@gmail.com" className="email-link">codedbyryuk@gmail.com</a>
           </div>
@@ -312,7 +312,8 @@ export default function App() {
               <a href="#" className="btn">Download résumé</a>
               <ul className="social-row">
                 <li><a href="https://github.com/codedbyryuk" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-                <li><a href="#" target="_blank" rel="noopener noreferrer">X / Twitter</a></li>
+                <li><a href="https://discord.com/users/1507692324157788180" target="_blank" rel="noopener noreferrer">Discord</a></li>
+                <li><a href="https://x.com/codedbyryuk" target="_blank" rel="noopener noreferrer">X / Twitter</a></li>
               </ul>
             </div>
             <footer className="site-footer">
