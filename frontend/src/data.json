@@ -1,0 +1,40 @@
+{
+  "stack": [
+    {
+      "category": "Languages",
+      "items": ["JavaScript", "Python", "SQL", "C", "C++"]
+    },
+    {
+      "category": "Frontend",
+      "items": ["React", "Three.js", "Vite","HTML"]
+    },
+    {
+      "category": "Backend",
+      "items": ["Node.js", "REST & GraphQL APIs", "Docker"]
+    },
+    {
+      "category": "Tooling",
+      "items": ["Git / GitHub Actions", "Figma", "Linux / bash","Firebase","Cloudflare"]
+    }
+  ],
+  "projects": [
+    {
+      "id": "01",
+      "title": "PokemonBidWars",
+      "year": "2026",
+      "description": "A Pokemon fan-game in which two players bid on a random pokemon to include them on the team. The battle takes place in Pokemon Showdown.",
+      "tags": ["React", "WebSockets", "Firebase"],
+      "link": "#",
+      "diagram": "<circle cx=\"14\" cy=\"46\" r=\"3\"/><circle cx=\"30\" cy=\"24\" r=\"3\"/><circle cx=\"48\" cy=\"34\" r=\"3\"/><circle cx=\"54\" cy=\"14\" r=\"3\"/><path d=\"M14 46 30 24 48 34 54 14\"/>"
+    },
+    {
+      "id": "02",
+      "title": "FireSideTalks",
+      "year": "2025",
+      "description": "A Chatting website where anyone can have a chat with anyone.",
+      "tags": ["Node.js", "WebSockets", "SQL"],
+      "link": "https://firesidetalk.pages.dev",
+      "diagram": "<rect x=\"10\" y=\"10\" width=\"44\" height=\"44\" rx=\"2\"/><path d=\"M18 24h28M18 32h28M18 40h16\"/>"
+    }
+  ]
+}
