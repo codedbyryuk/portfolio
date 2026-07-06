@@ -145,7 +145,7 @@ export default function App() {
 
           <nav className="index-nav" id="siteNav" aria-label="Section index">
             <ul>
-              {['hero', 'about', 'stack', 'work', 'contact'].map((section, idx) => (
+              {['hero', 'about', 'stack','repository', 'work', 'contact'].map((section, idx) => (
                 <li key={section}>
                   <a
                     href={`#${section}`}
@@ -166,6 +166,7 @@ export default function App() {
               <li><a href="https://github.com/codedbyryuk" target="_blank" rel="noopener noreferrer">GitHub</a></li>
               <li><a href="https://discord.com/users/1507692324157788180" target="_blank" rel="noopener noreferrer">Discord</a></li>
               <li><a href="https://x.com/codedbyryuk" target="_blank" rel="noopener noreferrer">X / Twitter</a></li>
+              <li><a href="https://instagram.com/codedbyryuk" target="_blank" rel="noopener noreferrer">Instagram</a></li>
             </ul>
             <a href="mailto:codedbyryuk@gmail.com" className="email-link">codedbyryuk@gmail.com</a>
           </div>
@@ -174,6 +175,8 @@ export default function App() {
         <main id="main">
           {/* Hero Section */}
           <section id="hero" className="section hero">
+            <div className="hero-layout-grid">
+            <div className="hero-text-col">
             <p className="eyebrow reveal">Fig. 00 — Status</p>
             <div className="status-line reveal"><span className="status-dot" aria-hidden="true"></span>Available for new projects — Q3 2026</div>
             <h1 className="hero-headline">
@@ -183,10 +186,13 @@ export default function App() {
               <span><em>eye of an editor.</em></span>
             </h1>
             <p className="hero-sub reveal">I am a full-stack developer focused on performant interfaces, developer tooling, and the small details most people never notice.</p>
-
+              </div>
+              <div className="hero-visual-col">
             <ThreeScene />
+            </div>
 
             <p className="scroll-cue"><span className="scroll-line"></span>Scroll</p>
+            </div>
           </section>
 
           {/* About Section */}
@@ -224,7 +230,7 @@ export default function App() {
             </div>
           </section>
           {/* Github Activity */}
-          <section id='githubActivity' className='section'>
+          <section id='repository' className='section'>
             <p className="eyebrow reveal">Fig. 03 — GitHub Activity</p>
             <h2 className="section-heading reveal">Repositories</h2>
 
@@ -314,6 +320,7 @@ export default function App() {
                 <li><a href="https://github.com/codedbyryuk" target="_blank" rel="noopener noreferrer">GitHub</a></li>
                 <li><a href="https://discord.com/users/1507692324157788180" target="_blank" rel="noopener noreferrer">Discord</a></li>
                 <li><a href="https://x.com/codedbyryuk" target="_blank" rel="noopener noreferrer">X / Twitter</a></li>
+                <li><a href="https://instagram.com/codedbyryuk" target="_blank" rel="noopener noreferrer">Instagram</a></li>
               </ul>
             </div>
             <footer className="site-footer">
