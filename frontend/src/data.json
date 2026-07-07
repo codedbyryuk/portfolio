@@ -2,7 +2,7 @@
   "stack": [
     {
       "category": "Languages",
-      "items": ["JavaScript", "Python", "SQL", "C", "C++"]
+      "items": ["JavaScript", "Python", "SQL", "C", "C++","java"]
     },
     {
       "category": "Frontend",
