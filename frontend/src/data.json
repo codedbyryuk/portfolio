@@ -33,7 +33,7 @@
       "year":"2026",
       "description":"A lightweight custom Minecraft launcher for Windows that lets you manage Minecraft versions, offline usernames, Java installations, Fabric modpacks, RAM allocation, and separate Minecraft instances — all from a simple terminal interface.",
       "tags":["Python","minecraft_library"],
-      "link":"https://github.com/codedbyryuk/CLI-Craft",
+      "link":"https://clicraft.pages.dev",
       "diagram": "<rect x=\"10\" y=\"20\" width=\"50\" height=\"40\" rx=\"8\"/><circle cx=\"25\" cy=\"40\" r=\"6\"/><circle cx=\"48\" cy=\"30\" r=\"6\"/><circle cx=\"75\" cy=\"30\" r=\"6\"/><rect x=\"40\" y=\"48\" width=\"10\" height=\"4\" rx=\"2\"/>"
     },
     {
