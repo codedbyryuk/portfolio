@@ -2,7 +2,7 @@
   "stack": [
     {
       "category": "Languages",
-      "items": ["JavaScript","Typescript", "Python", "SQL", "C", "C++","java"]
+      "items": ["JavaScript","Typescript", "Python", "SQL", "C","GO", "C++","java"]
     },
     {
       "category": "Frontend",
@@ -60,7 +60,7 @@
       "year":"In Development",
       "description":"Grydle is a personal page builder that lets anyone turn their identity, interests, and work into a beautiful, customizable bento-grid profile.",
       "tags":["Next.js","Typescript","Tailwind","Firebase"],
-      "link":"",
+      "link":"https://grydle.pages.dev",
       "diagram": "<rect x=\"8\" y=\"8\" width=\"22\" height=\"22\" rx=\"5\"/><rect x=\"34\" y=\"8\" width=\"10\" height=\"10\" rx=\"3\"/><rect x=\"48\" y=\"8\" width=\"12\" height=\"22\" rx=\"4\"/><rect x=\"8\" y=\"34\" width=\"10\" height=\"10\" rx=\"3\"/><rect x=\"22\" y=\"34\" width=\"22\" height=\"10\" rx=\"4\"/><rect x=\"48\" y=\"34\" width=\"12\" height=\"10\" rx=\"3\"/><rect x=\"8\" y=\"48\" width=\"22\" height=\"12\" rx=\"4\"/><rect x=\"34\" y=\"48\" width=\"10\" height=\"12\" rx=\"3\"/><rect x=\"48\" y=\"48\" width=\"12\" height=\"12\" rx=\"4\"/>"
     }
   ]
