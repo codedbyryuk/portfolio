@@ -78,7 +78,7 @@
       "year":"2026",
       "description":"Vaultic is a file manager written in GO that feaures tabs.",
       "tags":["GO","Fyne","Software"],
-      "link":"https://https://github.com/codedbyryuk/vaultic/releases/tag/v0.1.0",
+      "link":"https://github.com/codedbyryuk/vaultic/releases/tag/v0.1.0",
       "diagram":"<rect x=\"8\" y=\"8\" width=\"48\" height=\"48\" rx=\"8\"/><path d=\"M8 22 H56\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M8 22 V16 Q8 8 16 8 H48 Q56 8 56 16 V48 Q56 56 48 56 H16 Q8 56 8 48 Z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M14 15 H20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><path d=\"M28 30 H43 M28 38 H43 M28 46 H38\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><path d=\"M14 29 L19 34 L14 39\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>"
     }
   ]
